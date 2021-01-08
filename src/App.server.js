@@ -14,6 +14,7 @@ import EditButton from './EditButton.client';
 import SearchField from './SearchField.client';
 import NoteSkeleton from './NoteSkeleton';
 import NoteListSkeleton from './NoteListSkeleton';
+import {NotesCounter} from './NotesCounter.server';
 
 export default function App({selectedId, isEditing, searchText}) {
   return (
@@ -29,6 +30,9 @@ export default function App({selectedId, isEditing, searchText}) {
             role="presentation"
           />
           <strong>React Notes</strong>
+        </section>
+        <section>
+          <NotesCounter />
         </section>
         <section className="sidebar-menu" role="menubar">
           <SearchField />
